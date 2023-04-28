@@ -1,4 +1,3 @@
-```py
 """This is module translator to translate en-fr, fr-en"""
 import json
 from ibm_watson import LanguageTranslatorV3
@@ -32,4 +31,6 @@ def frenchToEnglish(frenchText):
         text=frenchText, model_id='fr-en').get_result()
     englishText = english_translate.get("translations")[0].get("translation")
     return englishText
-```
+
+text_p = englishToFrench('mother')
+print(text_p)
